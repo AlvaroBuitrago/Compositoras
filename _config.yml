@@ -1,1 +1,5 @@
+title: La música y las compositoras
+theme: minima
+plugins:
+  - jekyll-feed
 
