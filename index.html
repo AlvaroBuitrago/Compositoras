@@ -12,10 +12,10 @@
     </style>
 </head>
 <body>
-    <!-- Navbar de ejemplo -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Mi web</a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
             <a class="navbar-brand" href="./docs/repertorio.html">Repertorio</a>
             <a class="navbar-brand" href="./docs/lenguaje-musical.html">Lenguaje Musical</a>
             <a class="navbar-brand" href="./docs/improvisacion.html">Improvisación</a>
@@ -23,12 +23,77 @@
         </div>
     </nav>
 
-    <!-- Contenido principal -->
+    <!-- Contenido principal - Centrado con Bootstrap -->
     <div class="container mt-5">
-        <h1>¡Compositoras con Bootstrap!</h1>
-        <p>Este es un sitio estático en GitHub Pages.</p>
-        <button class="btn btn-primary">Botón de ejemplo</button>
-    </div>
+        <div class="row justify-content-center"> <!-- Fila centrada -->
+            <div class="col-lg-8 text-center"> <!-- Columna con ancho máximo y centrado de texto -->
+                <h1>¡Compositoras con Bootstrap!</h1>
+                <p>Este es un sitio estático en GitHub Pages.</p>
+                <button class="btn btn-primary mb-4">Botón de ejemplo</button>
+                
+                <!-- Componente Collapse 1 -->
+                <div class="mb-4">
+                    <p class="d-inline-flex gap-1">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Enlace con href
+                        </a>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Botón con data-bs-target
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body justify-content-center">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Componente Collapse 2 -->
+                <div class="mb-4">
+                    <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                            Alternar con colapso horizontal
+                        </button>
+                    </p>
+                    <div class="d-flex justify-content-center" style="min-height: 120px;"> <!-- Cambiado a d-flex y centrado -->
+                        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                            <div class="card card-body" style="width: 450px; margin: auto;"> <!-- Añadido margin: auto -->
+                                This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Componente Collapse 3 -->
+                <div class="mb-4">
+                    <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                            Botón de colapso múltiple
+                        </button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                            Botón de colapso múltiple
+                        </button>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                    Some placeholder content for the first collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    Some placeholder content for the second collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Fin de la columna -->
+        </div> <!-- Fin de la fila -->
 
     <!-- Bootstrap JS (con Popper incluido) -->
     <script src="./js/bootstrap.bundle.min.js"></script>
